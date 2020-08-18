@@ -2,7 +2,8 @@
   "name": "@hirez_io/karma-jasmine-given",
   "version": "1.0.0",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.com"
   },
   "author": {
     "name": "Shai Reznik",
@@ -24,6 +25,11 @@
     "hirez.io"
   ],
   "homepage": "https://github.com/hirezio/given/tree/master/packages/karma-jasmine-given",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hirezio/given",
+    "directory": "packages/karma-jasmine-given"
+  },
   "license": "MIT",
   "main": "lib/karma-jasmine-given.js",
   "scripts": {
