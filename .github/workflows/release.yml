@@ -11,7 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - name: Checkout Repo
@@ -24,6 +23,7 @@ jobs:
         with:
           node-version: '12'
           registry-url: 'https://registry.npmjs.org'
+          scope: '@hirez_io'
 
       - name: Get yarn cache dir
         id: yarn-cache-dir-path
@@ -64,6 +64,13 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: yarn lerna:version:ci
 
+      - name: Check Authentication with Registry
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm whoami
+
       - name: Publish to npm
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: yarn lerna:publish
