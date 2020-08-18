@@ -1,0 +1,10 @@
+{
+  "spec_dir": "packages/jasmine-given/spec",
+  "spec_files": [
+    "**/*[sS]pec.ts"
+  ],
+  "helpers": [],
+  "stopSpecOnExpectationFailure": true,
+  "stopOnSpecFailure": true,
+  "random": true
+}

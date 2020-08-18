@@ -1,0 +1,41 @@
+{
+  "name": "@hirez_io/karma-jasmine-given",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "Shai Reznik",
+    "company": "HiRez.io"
+  },
+  "description": "A karma plugin for loading @hirez_io/jasmine-given",
+  "keywords": [
+    "jasmine",
+    "jasmine-given",
+    "jasmine-karma",
+    "karma",
+    "gwt",
+    "Given When Then",
+    "Microtests",
+    "Testing",
+    "Unit tests",
+    "JavasScript Unit Tests",
+    "TypeScript Unit Tests",
+    "hirez.io"
+  ],
+  "homepage": "https://github.com/hirezio/given/tree/master/packages/karma-jasmine-given",
+  "license": "MIT",
+  "main": "lib/karma-jasmine-given.js",
+  "scripts": {
+    "build": "echo build is not needed for the karma plugin",
+    "test": "karma start"
+  },
+  "bugs": {
+    "url": "https://github.com/shairez/given/issues"
+  },
+  "devDependencies": {
+    "karma": "5.1.1",
+    "karma-chrome-launcher": "3.1.0",
+    "karma-jasmine": "3.3.1"
+  }
+}

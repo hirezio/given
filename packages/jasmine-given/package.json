@@ -1,0 +1,53 @@
+{
+  "name": "@hirez_io/jasmine-given",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "Shai Reznik",
+    "company": "HiRez.io"
+  },
+  "description": "A jasmine addon that helps you clean up your microtests by breaking them into a Given / When / Then structure.",
+  "keywords": [
+    "jasmine",
+    "jasmine-given",
+    "gwt",
+    "Given When Then",
+    "Microtests",
+    "Testing",
+    "Unit tests",
+    "JavasScript Unit Tests",
+    "TypeScript Unit Tests",
+    "hirez.io"
+  ],
+  "homepage": "https://github.com/hirezio/given/tree/master/packages/jasmine-given",
+  "license": "MIT",
+  "source": "temp-src/jasmine-given.ts",
+  "main": "dist/jasmine-given.js",
+  "types": "dist/jasmine-given.d.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "clean:temp-src": "rimraf temp-src",
+    "copy:shared-source": "cpy ../../shared/given-core/given-core.ts ./temp-src/ --rename=jasmine-given.ts",
+    "compile": "microbundle -f iife --tsconfig tsconfig.build.json --compress false",
+    "build": "run-s clean copy:shared-source compile clean:temp-src",
+    "test": "echo \n*** Run tests from the root folder\n"
+  },
+  "dependencies": {
+    "@hirez_io/karma-jasmine-given": "^0.0.0"
+  },
+  "peerDependencies": {
+    "jasmine": "< 4.x"
+  },
+  "devDependencies": {
+    "@types/jasmine": "3.5.11",
+    "cpy-cli": "^3.1.1",
+    "jasmine": "3.5.0",
+    "microbundle": "^0.12.3",
+    "nodemon": "2.0.4",
+    "nyc": "15.1.0",
+    "source-map-support": "^0.5.19",
+    "tsconfig-paths": "3.9.0"
+  }
+}

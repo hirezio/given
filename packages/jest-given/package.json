@@ -1,0 +1,46 @@
+{
+  "name": "@hirez_io/jest-given",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "Shai Reznik",
+    "company": "HiRez.io"
+  },
+  "description": "A jest addon that helps you clean up your microtests by breaking them into a Given / When / Then structure.",
+  "keywords": [
+    "jest",
+    "jest-given",
+    "gwt",
+    "Given When Then",
+    "Microtests",
+    "Testing",
+    "Unit tests",
+    "JavasScript Unit Tests",
+    "TypeScript Unit Tests",
+    "hirez.io"
+  ],
+  "homepage": "https://github.com/hirezio/given/tree/master/packages/jest-given",
+  "license": "MIT",
+  "main": "dist/jest-given.js",
+  "types": "dist/jest-given.d.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "clean:temp-src": "rimraf temp-src",
+    "copy:shared-source": "cpy ../../shared/given-core/given-core.ts ./temp-src/ --rename=jest-given.ts",
+    "compile": "tsc -p tsconfig.build.json",
+    "build": "run-s clean copy:shared-source compile clean:temp-src",
+    "test": "echo \n*** Run tests from the root folder\n"
+  },
+  "peerDependencies": {
+    "jest": "< 27.x"
+  },
+  "devDependencies": {
+    "@types/jest": "26.0.8",
+    "cpy-cli": "^3.1.1",
+    "jest": "26.2.2",
+    "microbundle": "^0.12.3",
+    "ts-jest": "26.1.4"
+  }
+}
