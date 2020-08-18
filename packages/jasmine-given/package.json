@@ -1,6 +1,6 @@
 {
   "name": "@hirez_io/jasmine-given",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "publishConfig": {
     "access": "public"
   },
@@ -35,7 +35,7 @@
     "test": "echo \n*** Run tests from the root folder\n"
   },
   "dependencies": {
-    "@hirez_io/karma-jasmine-given": "^0.0.0"
+    "@hirez_io/karma-jasmine-given": "^1.0.0"
   },
   "peerDependencies": {
     "jasmine": "< 4.x"
