@@ -1,6 +1,14 @@
 # `@hirez_io/jest-given` 📃👌
 
-A jest addon that helps you clean up your microtests by breaking them into a **"Given / When / Then"** structure. 
+A jest addon that helps you clean up your microtests by breaking them into a **"Given / When / Then"** structure.
+
+[![npm version](https://img.shields.io/npm/v/@hirez_io/jest-given.svg?style=flat-square)](https://www.npmjs.org/package/@hirez_io/jest-given)
+[![npm downloads](https://img.shields.io/npm/dm/@hirez_io/jest-given.svg?style=flat-square)](http://npm-stat.com/charts.html?package=@hirez_io/jest-given&from=2017-07-26)
+[![codecov](https://img.shields.io/codecov/c/github/hirezio/given.svg)](https://codecov.io/gh/hirezio/given)
+![Build and optionally publish](https://github.com/hirezio/given/workflows/Build%20and%20optionally%20publish/badge.svg)
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+[![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square)](code_of_conduct.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 ## Installation
 
@@ -14,7 +22,7 @@ or
 npm install -D @hirez_io/jest-given
 ```
 
-### Using TypeScript? 
+### Using TypeScript?
 
 You should add `@hirez_io/jest-given` to your `types` property in your `tsconfig.json` (or `tsconfig.spec.json`) like this:
 
@@ -31,15 +39,22 @@ You should add `@hirez_io/jest-given` to your `types` property in your `tsconfig
 }
 ```
 
+## Prior Art + Credit
+
+This library is a port of [`@hirez_io/jasmine-given`](https://github.com/hirezio/given/tree/master/packages/jasmine-given) which is a rewrite of the original [jasmine-given](https://github.com/searls/jasmine-given) library by Justin Searls who've done an amazing job with it.
+
+#### So why a rewrite and how is it different?
+
+[Everything is explained here](https://github.com/hirezio/given/tree/master/packages/jasmine-given#prior-art--credit) 😀
+
 ## Why choose this over plain `beforeEach` and `it()` functions?
 
-### ✅ **Cleaner structure:** 
+### ✅ **Cleaner structure:**
 
-  Helps you break down tests into the natural "Arrange, Act, Assert" model via "Given When and Then" and by that enforces a "microtest" structure. 
+Helps you break down tests into the natural "Arrange, Act, Assert" model via "Given When and Then" and by that enforces a "microtest" structure.
 
 ```ts
 describe('MyComponent', () => {
-
   let firstNum;
   let actualResult;
 
@@ -47,29 +62,26 @@ describe('MyComponent', () => {
   // It's where you setup your code / inputs
   Given(() => {
     firstNum = 1;
-  })
+  });
 
   // THIS IS A SPECIAL TYPE OF `beforeEach`
   // It's where you call the action under test
   When(() => {
     actualResult = addTwo(firstNum);
-  })
+  });
 
-  // THIS IS EXACTLY LIKE A `it()` 
+  // THIS IS EXACTLY LIKE A `it()`
   // It's where you expect the desired outcome
   Then(() => {
     expect(actualResult).toEqual(3);
-  })
-
-})
-
+  });
+});
 ```
 
-### It even supports `done` and `async` / `await` - 
+### It even supports `done` and `async` / `await` -
 
 ```ts
 describe('MyComponent', () => {
-
   let firstNum;
   let actualResult;
 
@@ -78,24 +90,22 @@ describe('MyComponent', () => {
     firstNum = 1;
     done();
     // you can also use done(err) or done.fail(err) if you need to
-  })
+  });
 
   // Supports "async/await"
   When(async () => {
     actualResult = await addTwo(firstNum);
-  })
+  });
 
   Then(() => {
     expect(actualResult).toEqual(3);
-  })
-
-})
-
+  });
+});
 ```
 
+### ✅ **Reusability:**
 
-### ✅ **Reusability:** 
-By being able to extract the action (`When`) outside the `Given` & `Then` pairs, you are able to reuse the same action and save the same repetitive code. 
+By being able to extract the action (`When`) outside the `Given` & `Then` pairs, you are able to reuse the same action and save the same repetitive code.
 
 ```ts
 describe('MyComponent', () => {
@@ -112,7 +122,7 @@ describe('MyComponent', () => {
   })
 
   describe('GIVEN initial number is 1 THEN the result should be 3', () => {
-    
+
     Given(() => {
       console.log('GIVEN #1');
       firstNum = 1;
@@ -126,7 +136,7 @@ describe('MyComponent', () => {
   })
 
   describe('GIVEN initial number is 18 THEN the result should be 20', () => {
-    
+
     Given(() => {
       console.log('GIVEN #2');
       firstNum = 18;
@@ -142,7 +152,7 @@ describe('MyComponent', () => {
 })
 
 
- 
+
 CONSOLE OUTPUT:
 --------------
 
@@ -157,33 +167,26 @@ THEN #2
 
 ```
 
+### ✅ **Better test description:**
 
-
-### ✅ **Better test description:** 
-The message for `it("should do something", ...)`  focus specifically on the "outcome" (`Then`), but moving the description of the test into the `describe` gives you a chance to write a more descriptive test description. 
+The message for `it("should do something", ...)` focus specifically on the "outcome" (`Then`), but moving the description of the test into the `describe` gives you a chance to write a more descriptive test description.
 
 (as seen above)
-
-## Prior Art + Credit
-This library is a port of [`@hirez_io/jasmine-given`](https://github.com/hirezio/given/tree/master/packages/jasmine-given) which is a rewrite of the original [jasmine-given](https://github.com/searls/jasmine-given) library by Justin Searls who've done an amazing job with it.
-
-#### So why a rewrite and how is it different?
-
-[Everything is explained here](https://github.com/hirezio/given/tree/master/packages/jasmine-given#prior-art--credit) 😀
 
 ## Contributing
 
 Want to contribute? Yayy! 🎉
 
-Please read and follow our [Contributing Guidelines](../../CONTRIBUTING.md) to learn what are the right steps to take before contributing your time, effort and code. 
+Please read and follow our [Contributing Guidelines](../../CONTRIBUTING.md) to learn what are the right steps to take before contributing your time, effort and code.
 
 Thanks 🙏
 
-
 ## Code Of Conduct
+
 Be kind to each other and please read our [code of conduct](../../CODE_OF_CONDUCT.md).
 
 ## License
+
 MIT
 
 ## Want to learn more?
