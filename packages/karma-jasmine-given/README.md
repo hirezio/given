@@ -4,7 +4,6 @@ A karma plugin for loading [@hirez_io/jasmine-given](https://github.com/hirezio/
 
 [![npm version](https://img.shields.io/npm/v/@hirez_io/karma-jasmine-given.svg?style=flat-square)](https://www.npmjs.org/package/@hirez_io/karma-jasmine-given)
 [![npm downloads](https://img.shields.io/npm/dm/@hirez_io/karma-jasmine-given.svg?style=flat-square)](http://npm-stat.com/charts.html?package=@hirez_io/karma-jasmine-given&from=2017-07-26)
-[![codecov](https://img.shields.io/codecov/c/github/hirezio/given.svg)](https://codecov.io/gh/hirezio/given)
 ![Build and optionally publish](https://github.com/hirezio/given/workflows/Build%20and%20optionally%20publish/badge.svg)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 [![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square)](code_of_conduct.md)
@@ -40,6 +39,8 @@ I rewrote it to save you the hassle of loading @hirez_io/jasmine-given's script 
 Here's how to modify your `karma.conf.js`:
 
 ```js
+// karma.conf.js
+
 module.exports = function(config) {
   config.set({
 

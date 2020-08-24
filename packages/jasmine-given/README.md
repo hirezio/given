@@ -36,6 +36,8 @@ npm install -D @hirez_io/jasmine-given
 You should add `@hirez_io/jasmine-given` to your `types` property in your `tsconfig.json` (or `tsconfig.spec.json`) like this:
 
 ```js
+// tsconfig.json or tsconfig.spec.json
+
 {
   ...
   "types": [
@@ -57,6 +59,8 @@ So it will automatically installs `@hirez_io/karma-jasmine-given` for you 😎
 Here's how to modify your `karma.conf.js`:
 
 ```js
+// karma.conf.js
+
 module.exports = function(config) {
   config.set({
 

@@ -27,6 +27,8 @@ npm install -D @hirez_io/jest-given
 You should add `@hirez_io/jest-given` to your `types` property in your `tsconfig.json` (or `tsconfig.spec.json`) like this:
 
 ```js
+// tsconfig.json or tsconfig.spec.json
+
 {
   ...
   "types": [
