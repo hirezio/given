@@ -75,10 +75,15 @@ describe('MyComponent', () => {
   Then(() => {
     expect(actualResult).toEqual(3);
   });
+
+  // You can also add a message
+  Then('it should be equal to 3', () => {
+    expect(actualResult).toEqual(3);
+  });
 });
 ```
 
-### It even supports `done` and `async` / `await` -
+#### It even supports `done` and `async` / `await` -
 
 ```ts
 describe('MyComponent', () => {
