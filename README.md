@@ -1,43 +1,45 @@
 # (jasmine | jest)-given Monorepo
 
-
 ## Packages
+
 This repository contains the HiRez.io's versions of:
 
-
-
-| Project | Status | Description |
-|---------|--------|-------------|
-| [@hirez_io/jest-given]          | | Jest addon that adds the "Given When Then" syntax|
-| [@hirez_io/jasmine-given]                | | Jasmine addon that adds the "Given When Then" syntax |
-| [@hirez_io/karma-jasmine-given]             |  | Karma plugin for `@hirez_io/jasmine-given` |
-
+| Project                         | Status                                                                           | Description                                          |
+| ------------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| [@hirez_io/jest-given]          | [![@hirez_io/jest-given-status]][@hirez_io/jest-given-package]                   | Jest addon that adds the "Given When Then" syntax    |
+| [@hirez_io/jasmine-given]       | [![@hirez_io/jasmine-given-status]][@hirez_io/jasmine-given-package]             | Jasmine addon that adds the "Given When Then" syntax |
+| [@hirez_io/karma-jasmine-given] | [![@hirez_io/karma-jasmine-given-status]][@hirez_io/karma-jasmine-given-package] | Karma plugin for `@hirez_io/jasmine-given`           |
 
 [@hirez_io/jest-given]: https://github.com/hirezio/given/tree/master/packages/jest-given
 [@hirez_io/jasmine-given]: https://github.com/hirezio/given/tree/master/packages/jasmine-given
 [@hirez_io/karma-jasmine-given]: https://github.com/hirezio/given/tree/master/packages/karma-jasmine-given
+[@hirez_io/jest-given-status]: https://img.shields.io/npm/v/@hirez_io/jest-given.svg
+[@hirez_io/jest-given-package]: https://npmjs.com/package/@hirez_io/jest-given
+[@hirez_io/jasmine-given-status]: https://img.shields.io/npm/v/@hirez_io/jasmine-given.svg
+[@hirez_io/jasmine-given-package]: https://npmjs.com/package/@hirez_io/jasmine-given
+[@hirez_io/karma-jasmine-given-status]: https://img.shields.io/npm/v/@hirez_io/karma-jasmine-given.svg
+[@hirez_io/karma-jasmine-given-package]: https://npmjs.com/package/@hirez_io/karma-jasmine-given
 
 ## Roadmap
 
-* [ ] Setup github actions to test, publish and collect coverage respectively
-* [ ] Add "FThen()?
-* [ ] Add more context to error messages (describe label from "this", or then label)?
-
-
+- [ ] Setup github actions to test, publish and collect coverage respectively
+- [ ] Add "FThen()?
+- [ ] Add more context to error messages (describe label from "this", or then label)?
 
 ## Contributing
 
 Want to contribute? Yayy! 🎉
 
-Please read and follow our [Contributing Guidelines](CONTRIBUTING.md) to learn what are the right steps to take before contributing your time, effort and code. 
+Please read and follow our [Contributing Guidelines](CONTRIBUTING.md) to learn what are the right steps to take before contributing your time, effort and code.
 
 Thanks 🙏
 
-
 ## Code Of Conduct
+
 Be kind to each other and please read our [code of conduct](CODE_OF_CONDUCT.md).
 
 ## License
+
 MIT
 
 ## Want to learn more?
