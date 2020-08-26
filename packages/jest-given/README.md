@@ -41,6 +41,27 @@ You should add `@hirez_io/jest-given` to your `types` property in your `tsconfig
 }
 ```
 
+⚠ **ATTENTION:** If you have `typeRoots` configured like this -
+
+```ts
+"typeRoots": [
+  "node_modules/@types"
+],
+```
+
+You should add `"node_modules"` like this -
+
+```ts
+"typeRoots": [
+  "node_modules/@types",
+  "node_modules" // <-- ADD THIS
+],
+```
+
+or else it won't find `@hirez_io/jest-given` global types.
+
+⚠ **VS CODE USERS:** add the above configuration (`types` and/or `typeRoots`) to your `tsconfig.json` specifically or else it would not recognize the global types.
+
 ## Prior Art + Credit
 
 This library is a port of [`@hirez_io/jasmine-given`](https://github.com/hirezio/given/tree/master/packages/jasmine-given) which is a rewrite of the original [jasmine-given](https://github.com/searls/jasmine-given) library by Justin Searls who've done an amazing job with it.

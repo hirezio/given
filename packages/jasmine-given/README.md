@@ -50,6 +50,27 @@ You should add `@hirez_io/jasmine-given` to your `types` property in your `tscon
 }
 ```
 
+⚠ **ATTENTION:** If you have `typeRoots` configured like this -
+
+```ts
+"typeRoots": [
+  "node_modules/@types"
+],
+```
+
+You should add `"node_modules"` like this -
+
+```ts
+"typeRoots": [
+  "node_modules/@types",
+  "node_modules" // <-- ADD THIS
+],
+```
+
+or else it won't find `@hirez_io/jasmine-given` global types.
+
+⚠ **VS CODE USERS:** add the above configuration (`types` and/or `typeRoots`) to your `tsconfig.json` specifically or else it would not recognize the global types.
+
 ### Using karma?
 
 `@hirez_io/jasmine-given` has a dependency on `@hirez_io/karma-jasmine-given` which is a karma plugin (inspired by [karma-jasmine-given](https://github.com/kirisu/karma-jasmine-given)) I rewrote to save you the hassle of loading the library script yourself.
