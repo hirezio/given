@@ -44,7 +44,7 @@
     "@hirez_io/karma-jasmine-given": "^1.0.3"
   },
   "peerDependencies": {
-    "jasmine": "< 4.x"
+    "jasmine-core": "< 4.x"
   },
   "devDependencies": {
     "@types/jasmine": "3.5.11",
