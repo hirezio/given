@@ -183,7 +183,6 @@ describe('Jest Given', () => {
 
   describe('Then() is called with only a label', () => {
     it('should throw when called', () => {
-      jest.spyOn(root, 'it').mockImplementation();
       function errorThrowingCall() {
         (Then as any)('FAKE MESSAGE');
       }
