@@ -13,9 +13,13 @@ Help us keep this project open and inclusive. Please read and follow our [Code o
 
 ## Want to contribute code? please submit a Pull Request (PR), but first...
 
+.
+
 ### ✅ 1. [Search this repo first](https://github.com/hirezio/given/pulls)...
 
 for an open or closed PR that relates to the change you want to introduce.
+
+.
 
 ### ✅ 2. **Before you start coding - find / create an issue**
 
@@ -23,6 +27,8 @@ for an open or closed PR that relates to the change you want to introduce.
 Discussing the design up front helps to ensure that we're ready to accept your work.
 
 **Don't waste your time working on code before you got a 👍 in an issue comment.**
+
+.
 
 ### ✅ 3. Fork the this repo and create a branch.
 
@@ -36,9 +42,13 @@ git checkout -b my-fix-branch master
 It is the actual implementation of both `jasmine-given` and `jest-given`.
 So if you change anything you need to verify that there is a test in both of the frameworks spec files.
 
+.
+
 ### ✅ 4. Make sure you add / modify tests
 
 Run `yarn test:full` to make sure there aren't any errors
+
+.
 
 ### ✅ 5. Commit your changes using commitizen:
 
@@ -65,11 +75,15 @@ This will create a descriptive commit message that follows the
 
 This is necessary to generate meaningful release notes / CHANGELOG automatically.
 
+.
+
 ### ✅ 6. Push your branch to GitHub:
 
 ```shell
 git push origin my-fix-branch
 ```
+
+.
 
 ### ✅ 7. In GitHub, create a pull request for `hirezio/given:master`.
 
@@ -86,7 +100,9 @@ If you need to update your PR for some reason -
   git push -f
   ```
 
-### ✅ 8. After your pull request is merged - delete your PR branchc
+.
+
+### ✅ 8. After your pull request is merged - delete your PR branch
 
 After your pull request is merged, you can safely delete your branch and pull the changes from the main (upstream) repository:
 
@@ -114,4 +130,8 @@ After your pull request is merged, you can safely delete your branch and pull th
   git pull --ff upstream master
   ```
 
+.
+
 ### ✅ 9. That's it! Thank you for your contribution! 🙏💓
+
+[commit-message-format]: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#
