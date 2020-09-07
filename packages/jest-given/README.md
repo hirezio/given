@@ -22,7 +22,28 @@ or
 npm install -D @hirez_io/jest-given
 ```
 
-### Using TypeScript?
+## Configuring Jest
+
+Add the following line to your jest config:
+
+```json
+"setupFilesAfterEnv": ["node_modules/@hirez_io/jest-given/dist/jest-given.js"]
+```
+
+⚠ **ATTENTION:** If you have configured `rootDir` -
+
+Make sure you have the right path to `node_modules`.
+
+For example:
+
+```json
+"rootDir": "src",
+"setupFilesAfterEnv": ["../node_modules/@hirez_io/jest-given/dist/jest-given.js"]
+```
+
+.
+
+## Using TypeScript?
 
 You should add `@hirez_io/jest-given` to your `types` property in your `tsconfig.json` (or `tsconfig.spec.json`) like this:
 
@@ -62,6 +83,8 @@ or else it won't find `@hirez_io/jest-given` global types.
 
 ⚠ **VS CODE USERS:** add the above configuration (`types` and/or `typeRoots`) to your `tsconfig.json` specifically or else it would not recognize the global types.
 
+.
+
 ## Prior Art + Credit
 
 This library is a port of [`@hirez_io/jasmine-given`](https://github.com/hirezio/given/tree/master/packages/jasmine-given) which is a rewrite of the original [jasmine-given](https://github.com/searls/jasmine-given) library by Justin Searls who've done an amazing job with it.
@@ -69,6 +92,8 @@ This library is a port of [`@hirez_io/jasmine-given`](https://github.com/hirezio
 #### So why a rewrite and how is it different?
 
 [Everything is explained here](https://github.com/hirezio/given/tree/master/packages/jasmine-given#prior-art--credit) 😀
+
+.
 
 ## Why choose this over plain `beforeEach` and `it()` functions?
 
