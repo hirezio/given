@@ -75,7 +75,7 @@ You should add `"node_modules"` like this -
 ```ts
 "typeRoots": [
   "node_modules/@types",
-  "node_modules" // <-- ADD THIS
+  "node_modules/@hirez_io" // <-- ADD THIS
 ],
 ```
 
