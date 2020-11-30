@@ -87,7 +87,7 @@ or else it won't find `@hirez_io/jest-given` global types.
 
 ## Prior Art + Credit
 
-This library is a port of [`@hirez_io/jasmine-given`](https://github.com/hirezio/given/tree/master/packages/jasmine-given) which is a rewrite of the original [jasmine-given](https://github.com/searls/jasmine-given) library by Justin Searls who've done an amazing job with it.
+This library is a port of [`@hirez_io/jasmine-given`](https://github.com/hirezio/given/tree/master/packages/jasmine-given) which is a rewrite of the original [jasmine-given](https://github.com/searls/jasmine-given) library by [Justin Searls](https://twitter.com/searls) who've done an amazing job with it. Checkout his company [TestDouble](https://testdouble.com) and their [blog](https://blog.testdouble.com).
 
 #### So why a rewrite and how is it different?
 

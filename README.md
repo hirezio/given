@@ -26,6 +26,10 @@ This repository contains the HiRez.io's versions of:
 - [ ] Add "FThen()?
 - [ ] Add more context to error messages (describe label from "this", or then label)?
 
+## Prior Art + Credit
+
+The "Given" concept (and implementation) is based on the original [jasmine-given](https://github.com/searls/jasmine-given) library by [Justin Searls](https://twitter.com/searls) who've done an amazing job with it, which is in turn based on [rspec-given](https://github.com/jimweirich/rspec-given) by [Jim Weirich](https://twitter.com/jimweirich).
+
 ## Contributing
 
 Want to contribute? Yayy! 🎉

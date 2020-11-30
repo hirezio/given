@@ -103,13 +103,13 @@ module.exports = function(config) {
 
 ## Prior Art + Credit
 
-This library is a rewrite of the original [jasmine-given](https://github.com/searls/jasmine-given) library by Justin Searls who've done an amazing job with it.
+This library is a rewrite of the original [jasmine-given](https://github.com/searls/jasmine-given) library by [Justin Searls](https://twitter.com/searls) who've done an amazing job with it. Checkout his company [TestDouble](https://testdouble.com) and their [blog](https://blog.testdouble.com).
 
 #### So why a rewrite?
 
 Well.. because the original library is no longer maintained and was written in CoffeeScript, so I decided to rewrite it in TypeScript to make sure I could continue supporting it.
 
-Plus I fixed the error messages and added support for newer features like async/await etc.
+Plus I fixed the error messages, removed less frequently used features and added support for newer features like async/await etc.
 
 ### How is it different from the original `jasmine-given`?
 
@@ -121,7 +121,7 @@ Plus I fixed the error messages and added support for newer features like async/
 - ☑ Wrapped sync functions as async to [prevent zalgo](https://blog.izs.me/2013/08/designing-apis-for-asynchrony)
 
 **BREAKING CHANGES:**
-I removed a bunch of features that I didn't really use that much over the years and made the library more complicated to implement.
+I removed a bunch of features that I didn't really use that much over the years which also made this library more complicated to implement.
 
 - ⛔ `Add()` is removed
 - ⛔ `Invariant()` is removed
