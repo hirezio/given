@@ -1,6 +1,6 @@
 {
   "name": "@hirez_io/jasmine-given",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.com"
@@ -41,7 +41,7 @@
     "test": "echo \n*** Run tests from the root folder\n"
   },
   "dependencies": {
-    "@hirez_io/karma-jasmine-given": "^1.0.3"
+    "@hirez_io/karma-jasmine-given": "^1.1.0"
   },
   "peerDependencies": {
     "jasmine-core": "< 4.x"
