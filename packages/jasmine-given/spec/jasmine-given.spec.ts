@@ -164,7 +164,7 @@ describe('Jasmine Given', () => {
   });
 
   describe('Then() should pass an empty string to it() given no label', () => {
-    beforeEach(() => {
+    it('should not add the label', () => {
       spyOn(root, 'it');
       Then(() => {});
       const actualLabel = (it as jasmine.Spy).calls.first().args[0];
