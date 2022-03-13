@@ -1,6 +1,6 @@
 {
   "name": "@hirez_io/jest-given",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.com"

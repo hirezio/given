@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/hirezio/given/compare/@hirez_io/karma-jasmine-given@1.1.0...@hirez_io/karma-jasmine-given@1.1.1) (2022-03-13)
+
+**Note:** Version bump only for package @hirez_io/karma-jasmine-given
+
+
+
+
+
 # [1.1.0](https://github.com/hirezio/given/compare/@hirez_io/karma-jasmine-given@1.0.3...@hirez_io/karma-jasmine-given@1.1.0) (2021-01-22)
 
 
