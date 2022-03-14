@@ -51,7 +51,7 @@ Be kind to each other and please read our [code of conduct](CODE_OF_CONDUCT.md).
 ## Want to learn more?
 
 <div align="center">
-  <a href="https://learn.hirez.io/?utm_source=github&utm_medium=link&utm_campaign=given">
+  <a href="https://hirez.io?utm_medium=Open_Source&utm_source=Github&utm_campaign=Lead_Generation&utm_content=given_readme_banner">
     <img src="for-readme/test-angular.jpg"
       alt="TestAngular.com - Free Angular Testing Workshop - The Roadmap to Angular Testing Mastery"
       width="600"
