@@ -444,9 +444,36 @@ describe('Jest Given', () => {
       expect(actualError.message).toContain(NO_STACK_ERROR);
     });
 
+    it('should show original Message and Stack trace', async () => {
+      let errStack = '';
+      const errMessage = 'original_message';
+
+      When(async () => {
+        const err = new Error();
+        errStack = err.stack || '';
+        err.message = errMessage;
+
+        throw err;
+      });
+      // We must call "Then" or else the logic of "When" won't be called
+      Then(() => {});
+
+      try {
+        await actualPromiseReturnedFromIt;
+      } catch (err) {
+        actualError = err;
+      } finally {
+        afterEachCache.forEach((fn) => fn());
+      }
+
+      expect(actualError.message).toContain(`${CONTEXT_FOR_GWT_ERROR} When():`);
+      expect(actualError.message).toContain(errMessage);
+      expect(actualError.stack).toContain(errStack);
+    });
+
     it('should show a meaningful message if thrown as Object without stack in async "When"', async () => {
       When(async () => {
-        throw { toString: () => FAKE_ERROR_MESSAGE };
+        throw { message: FAKE_ERROR_MESSAGE };
       });
       // We must call "Then" or else the logic of "When" won't be called
       Then(() => {});
