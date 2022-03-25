@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/hirezio/given/compare/@hirez_io/jest-given@1.0.4...@hirez_io/jest-given@1.1.0) (2022-03-25)
+
+
+### Features
+
+* **given-core:** show original error details in new context error ([bb92e36](https://github.com/hirezio/given/commit/bb92e365027f4f6f70583abc3b598795d6e491ba)), closes [#6](https://github.com/hirezio/given/issues/6)
+
+
+
+
+
 ## [1.0.4](https://github.com/hirezio/given/compare/@hirez_io/jest-given@1.0.3...@hirez_io/jest-given@1.0.4) (2022-03-13)
 
 **Note:** Version bump only for package @hirez_io/jest-given
