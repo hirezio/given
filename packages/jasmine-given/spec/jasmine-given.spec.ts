@@ -457,7 +457,7 @@ describe('Jasmine Given', () => {
       expect(actualError.message).toContain(NO_STACK_ERROR);
     });
 
-    it('caught error should show original Message and Stack trace', async () => {
+    it('should show the original Message and Stack trace', async () => {
       let errStack = '';
       const errMessage = 'original_message';
 
@@ -478,7 +478,7 @@ describe('Jasmine Given', () => {
       } finally {
         afterEachCache.forEach((fn) => fn());
       }
-
+      console.log('actualError', actualError);
       expect(actualError.message).toContain(`${CONTEXT_FOR_GWT_ERROR} When():`);
       expect(actualError.message).toContain(errMessage);
       expect(actualError.stack).toContain(errStack);

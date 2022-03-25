@@ -444,7 +444,7 @@ describe('Jest Given', () => {
       expect(actualError.message).toContain(NO_STACK_ERROR);
     });
 
-    it('should show original Message and Stack trace', async () => {
+    it('should show the original Message and Stack trace', async () => {
       let errStack = '';
       const errMessage = 'original_message';
 
