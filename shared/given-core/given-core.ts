@@ -110,19 +110,22 @@ async function promisify(fn: TestCallback): Promise<TestCallback> {
   return await (fn as () => any).call(currentUserContext);
 }
 
-function throwErrorWithContext(originFunctionName: string, error: Error | string) {
-  let errorMessage: string = '';
+function throwErrorWithContext(
+  originFunctionName: string,
+  originalError: Error | string
+) {
+  const messagePrefix = `${CONTEXT_FOR_GWT_ERROR} ${originFunctionName}():`;
 
-  if (typeof error === 'string') {
-    errorMessage = `${error}
-${NO_STACK_ERROR}`;
-  } else if (error.stack) {
-    errorMessage = error.stack;
-  } else {
-    errorMessage = error.toString();
+  if (typeof originalError === 'string') {
+    throw new Error(`${messagePrefix}\n${originalError}\n${NO_STACK_ERROR}`);
   }
-  throw new Error(`${CONTEXT_FOR_GWT_ERROR} ${originFunctionName}(): 
-  ${errorMessage}`);
+
+  const errorMessage = `${originalError.name || 'Error'}: ${originalError.message}`;
+  const newError = new Error(`${messagePrefix}\n${errorMessage}`);
+
+  newError.stack = `${messagePrefix}\n${originalError.stack}`;
+
+  throw newError;
 }
 
 function doesFunctionHaveParams(fn: (...args: any[]) => any) {
