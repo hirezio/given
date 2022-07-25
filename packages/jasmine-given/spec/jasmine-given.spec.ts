@@ -222,8 +222,8 @@ describe('Jasmine Given', () => {
       try {
         await actualPromiseFromGiven;
       } catch (err) {
-        expect(err.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
-        expect(err.message).toContain(FAKE_ERROR);
+        expect((err as Error)?.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
+        expect((err as Error)?.message).toContain(FAKE_ERROR);
       }
     });
 
@@ -234,8 +234,8 @@ describe('Jasmine Given', () => {
       try {
         await actualPromiseFromGiven;
       } catch (err) {
-        expect(err.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
-        expect(err.message).toContain(FAKE_ERROR);
+        expect((err as Error)?.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
+        expect((err as Error)?.message).toContain(FAKE_ERROR);
       }
     });
 
@@ -246,8 +246,8 @@ describe('Jasmine Given', () => {
       try {
         await actualPromiseFromGiven;
       } catch (err) {
-        expect(err.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
-        expect(err.message).toContain(FAKE_ERROR);
+        expect((err as Error)?.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
+        expect((err as Error)?.message).toContain(FAKE_ERROR);
       }
     });
 
@@ -258,8 +258,8 @@ describe('Jasmine Given', () => {
       try {
         await actualPromiseFromGiven;
       } catch (err) {
-        expect(err.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
-        expect(err.message).toContain(FAKE_ERROR);
+        expect((err as Error)?.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
+        expect((err as Error)?.message).toContain(FAKE_ERROR);
       }
     });
 
@@ -271,8 +271,8 @@ describe('Jasmine Given', () => {
       try {
         await actualPromiseFromGiven;
       } catch (err) {
-        expect(err.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
-        expect(err.message).toContain(FAKE_ERROR);
+        expect((err as Error)?.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
+        expect((err as Error)?.message).toContain(FAKE_ERROR);
       }
     });
   });

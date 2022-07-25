@@ -164,11 +164,12 @@ describe('Jest Given', () => {
   });
 
   describe('Then() should pass an empty string to it() given no label', () => {
-    beforeEach(() => {
+    it('should pass an empty string', () => {
       const itSpy = jest.spyOn(root, 'it').mockImplementation();
       Then(() => {});
       const actualLabel = itSpy.mock.calls[0][0];
       expect(actualLabel).toBe('');
+      itSpy.mockReset();
     });
   });
 
@@ -207,8 +208,8 @@ describe('Jest Given', () => {
       try {
         await actualPromiseFromGiven;
       } catch (err) {
-        expect(err.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
-        expect(err.message).toContain(FAKE_ERROR);
+        expect((err as Error)?.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
+        expect((err as Error)?.message).toContain(FAKE_ERROR);
       }
     });
 
@@ -219,8 +220,8 @@ describe('Jest Given', () => {
       try {
         await actualPromiseFromGiven;
       } catch (err) {
-        expect(err.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
-        expect(err.message).toContain(FAKE_ERROR);
+        expect((err as Error)?.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
+        expect((err as Error)?.message).toContain(FAKE_ERROR);
       }
     });
 
@@ -231,8 +232,8 @@ describe('Jest Given', () => {
       try {
         await actualPromiseFromGiven;
       } catch (err) {
-        expect(err.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
-        expect(err.message).toContain(FAKE_ERROR);
+        expect((err as Error)?.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
+        expect((err as Error)?.message).toContain(FAKE_ERROR);
       }
     });
 
@@ -243,8 +244,8 @@ describe('Jest Given', () => {
       try {
         await actualPromiseFromGiven;
       } catch (err) {
-        expect(err.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
-        expect(err.message).toContain(FAKE_ERROR);
+        expect((err as Error)?.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
+        expect((err as Error)?.message).toContain(FAKE_ERROR);
       }
     });
 
@@ -256,8 +257,8 @@ describe('Jest Given', () => {
       try {
         await actualPromiseFromGiven;
       } catch (err) {
-        expect(err.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
-        expect(err.message).toContain(FAKE_ERROR);
+        expect((err as Error)?.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
+        expect((err as Error)?.message).toContain(FAKE_ERROR);
       }
     });
   });

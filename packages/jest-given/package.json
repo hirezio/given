@@ -40,13 +40,13 @@
     "test": "echo \n*** Run tests from the root folder\n"
   },
   "peerDependencies": {
-    "jest": "< 27.x"
+    "jest": "< 29.x"
   },
   "devDependencies": {
-    "@types/jest": "26.0.8",
+    "@types/jest": "28.1.4",
     "cpy-cli": "^3.1.1",
-    "jest": "26.2.2",
-    "microbundle": "^0.12.3",
-    "ts-jest": "26.1.4"
+    "jest": "28.1.2",
+    "microbundle": "^0.15.0",
+    "ts-jest": "28.0.5"
   }
 }

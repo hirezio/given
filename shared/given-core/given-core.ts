@@ -36,7 +36,7 @@ root.Given = function Given(givenSetupFn: any) {
     try {
       return await promisify(givenSetupFn);
     } catch (error) {
-      throwErrorWithContext('Given', error);
+      throwErrorWithContext('Given', error as any);
     }
   }
 
@@ -66,7 +66,7 @@ root.Then = function Then(specFnOrLabel: TestCallback | string, specFn?: TestCal
       try {
         await promisify(fn);
       } catch (error) {
-        throwErrorWithContext(originFunctionName, error);
+        throwErrorWithContext(originFunctionName, error as any);
       }
     }
   });
@@ -98,7 +98,7 @@ async function promisify(fn: TestCallback): Promise<TestCallback> {
           reject(err);
           return;
         }
-        resolve();
+        resolve(undefined as any);
       }
       next.fail = function nextFail(err: Error) {
         reject(err);
