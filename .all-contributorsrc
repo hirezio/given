@@ -32,6 +32,17 @@
         "test",
         "maintenance"
       ]
+    },
+    {
+      "login": "Yianen",
+      "name": "Yianen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29684111?v=4",
+      "profile": "https://github.com/Yianen",
+      "contributions": [
+        "code",
+        "test",
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
