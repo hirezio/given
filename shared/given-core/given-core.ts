@@ -35,7 +35,7 @@ root.Given = function Given(givenSetupFn: any) {
   async function wrappedFn() {
     try {
       return await promisify(givenSetupFn);
-    } catch (error) {
+    } catch (error: any) {
       throwErrorWithContext('Given', error);
     }
   }
@@ -65,7 +65,7 @@ root.Then = function Then(specFnOrLabel: TestCallback | string, specFn?: TestCal
 
       try {
         await promisify(fn);
-      } catch (error) {
+      } catch (error: any) {
         throwErrorWithContext(originFunctionName, error);
       }
     }
@@ -90,7 +90,7 @@ function getLabelAndFunction(
   return [label, actualSpecFunction];
 }
 
-async function promisify(fn: TestCallback): Promise<TestCallback> {
+async function promisify(fn: TestCallback): Promise<TestCallback | undefined> {
   if (doesFunctionHaveParams(fn)) {
     return new Promise((resolve, reject) => {
       function next(err: Error) {
@@ -98,7 +98,7 @@ async function promisify(fn: TestCallback): Promise<TestCallback> {
           reject(err);
           return;
         }
-        resolve();
+        resolve(undefined);
       }
       next.fail = function nextFail(err: Error) {
         reject(err);

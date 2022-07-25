@@ -3,6 +3,7 @@ module.exports = {
   rootDir: '../../',
   roots: ['<rootDir>/shared/given-core', '<rootDir>/packages/jest-given/spec'],
   verbose: true,
+  resetMocks: true,
   testEnvironment: 'node',
   collectCoverage: true,
   coverageDirectory: 'packages/jest-given/coverage',
@@ -16,7 +17,7 @@ module.exports = {
   },
   globals: {
     'ts-jest': {
-      tsConfig: '<rootDir>/packages/jest-given/tsconfig.json'
-    }
-  }
+      tsconfig: '<rootDir>/packages/jest-given/tsconfig.json',
+    },
+  },
 };

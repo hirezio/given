@@ -170,6 +170,7 @@ describe('Jest Given', () => {
       const actualLabel = itSpy.mock.calls[0][0];
       expect(actualLabel).toBe('');
     });
+    it('fake test just to satisfy jest', () => {});
   });
 
   describe('Then() should be able to have a label', () => {
@@ -206,7 +207,7 @@ describe('Jest Given', () => {
       });
       try {
         await actualPromiseFromGiven;
-      } catch (err) {
+      } catch (err: any) {
         expect(err.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
         expect(err.message).toContain(FAKE_ERROR);
       }
@@ -218,7 +219,7 @@ describe('Jest Given', () => {
       });
       try {
         await actualPromiseFromGiven;
-      } catch (err) {
+      } catch (err: any) {
         expect(err.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
         expect(err.message).toContain(FAKE_ERROR);
       }
@@ -230,7 +231,7 @@ describe('Jest Given', () => {
       });
       try {
         await actualPromiseFromGiven;
-      } catch (err) {
+      } catch (err: any) {
         expect(err.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
         expect(err.message).toContain(FAKE_ERROR);
       }
@@ -242,7 +243,7 @@ describe('Jest Given', () => {
       });
       try {
         await actualPromiseFromGiven;
-      } catch (err) {
+      } catch (err: any) {
         expect(err.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
         expect(err.message).toContain(FAKE_ERROR);
       }
@@ -255,7 +256,7 @@ describe('Jest Given', () => {
 
       try {
         await actualPromiseFromGiven;
-      } catch (err) {
+      } catch (err: any) {
         expect(err.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
         expect(err.message).toContain(FAKE_ERROR);
       }
@@ -300,7 +301,7 @@ describe('Jest Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -320,7 +321,7 @@ describe('Jest Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -349,7 +350,7 @@ describe('Jest Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -373,7 +374,7 @@ describe('Jest Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -394,7 +395,7 @@ describe('Jest Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -414,7 +415,7 @@ describe('Jest Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -433,7 +434,7 @@ describe('Jest Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -460,7 +461,7 @@ describe('Jest Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -480,7 +481,7 @@ describe('Jest Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -499,7 +500,7 @@ describe('Jest Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -520,7 +521,7 @@ describe('Jest Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -539,7 +540,7 @@ describe('Jest Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -557,7 +558,7 @@ describe('Jest Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -575,7 +576,7 @@ describe('Jest Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());

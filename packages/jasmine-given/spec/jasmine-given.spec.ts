@@ -221,7 +221,7 @@ describe('Jasmine Given', () => {
       });
       try {
         await actualPromiseFromGiven;
-      } catch (err) {
+      } catch (err: any) {
         expect(err.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
         expect(err.message).toContain(FAKE_ERROR);
       }
@@ -233,7 +233,7 @@ describe('Jasmine Given', () => {
       });
       try {
         await actualPromiseFromGiven;
-      } catch (err) {
+      } catch (err: any) {
         expect(err.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
         expect(err.message).toContain(FAKE_ERROR);
       }
@@ -245,7 +245,7 @@ describe('Jasmine Given', () => {
       });
       try {
         await actualPromiseFromGiven;
-      } catch (err) {
+      } catch (err: any) {
         expect(err.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
         expect(err.message).toContain(FAKE_ERROR);
       }
@@ -257,7 +257,7 @@ describe('Jasmine Given', () => {
       });
       try {
         await actualPromiseFromGiven;
-      } catch (err) {
+      } catch (err: any) {
         expect(err.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
         expect(err.message).toContain(FAKE_ERROR);
       }
@@ -270,7 +270,7 @@ describe('Jasmine Given', () => {
 
       try {
         await actualPromiseFromGiven;
-      } catch (err) {
+      } catch (err: any) {
         expect(err.message).toContain(`${CONTEXT_FOR_GWT_ERROR} Given():`);
         expect(err.message).toContain(FAKE_ERROR);
       }
@@ -313,7 +313,7 @@ describe('Jasmine Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -333,7 +333,7 @@ describe('Jasmine Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -362,7 +362,7 @@ describe('Jasmine Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -386,7 +386,7 @@ describe('Jasmine Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -407,7 +407,7 @@ describe('Jasmine Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -427,7 +427,7 @@ describe('Jasmine Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -446,7 +446,7 @@ describe('Jasmine Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -473,7 +473,7 @@ describe('Jasmine Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -493,7 +493,7 @@ describe('Jasmine Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -512,7 +512,7 @@ describe('Jasmine Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -533,7 +533,7 @@ describe('Jasmine Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -552,7 +552,7 @@ describe('Jasmine Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -570,7 +570,7 @@ describe('Jasmine Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
@@ -588,7 +588,7 @@ describe('Jasmine Given', () => {
 
       try {
         await actualPromiseReturnedFromIt;
-      } catch (err) {
+      } catch (err: any) {
         actualError = err;
       } finally {
         afterEachCache.forEach((fn) => fn());
