@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/hirezio/given/compare/@hirez_io/jasmine-given@1.1.0...@hirez_io/jasmine-given@1.1.1) (2022-07-25)
+
+
+### Bug Fixes
+
+* **global:** upgrade jest version to 28 ([05b447f](https://github.com/hirezio/given/commit/05b447fcaf3cddfc346253f31e2630100488095c)), closes [#14](https://github.com/hirezio/given/issues/14)
+
+
+
+
+
 # [1.1.0](https://github.com/hirezio/given/compare/@hirez_io/jasmine-given@1.0.7...@hirez_io/jasmine-given@1.1.0) (2022-03-25)
 
 
