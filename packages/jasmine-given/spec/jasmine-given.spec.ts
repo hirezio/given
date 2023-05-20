@@ -4,7 +4,7 @@ import {
   CONTEXT_FOR_GWT_ERROR,
 } from '../../../shared/given-core/given-core';
 
-const root = (1, eval)('this');
+const root = (0, eval)('this');
 
 describe('Jasmine Given', () => {
   let fakeNumber: number | undefined;

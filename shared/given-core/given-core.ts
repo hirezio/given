@@ -22,7 +22,7 @@ declare global {
   function Then(fn: TestCallback): void;
 }
 
-const root = (1, eval)('this');
+const root = (0, eval)('this');
 const whenFnsQueue: any[] = [];
 
 let currentUserContext: any = null;
