@@ -1,7 +1,7 @@
 # (jasmine | jest)-given Monorepo
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Packages
@@ -65,11 +65,14 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
-  <tr>
-    <td align="center"><a href="https://www.hirez.io/?utm_medium=Open_Source&utm_source=Github&utm_campaign=Lead_Generation&utm_content=given--all-contributors-profile-link"><img src="https://avatars1.githubusercontent.com/u/1430726?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Shai Reznik</b></sub></a><br /><a href="https://github.com/hirezio/given/commits?author=shairez" title="Code">💻</a> <a href="https://github.com/hirezio/given/commits?author=shairez" title="Documentation">📖</a> <a href="#ideas-shairez" title="Ideas, Planning, & Feedback">🤔</a> <a href="#infra-shairez" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-shairez" title="Maintenance">🚧</a> <a href="#mentoring-shairez" title="Mentoring">🧑‍🏫</a> <a href="https://github.com/hirezio/given/pulls?q=is%3Apr+reviewed-by%3Ashairez" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/hirezio/given/commits?author=shairez" title="Tests">⚠️</a></td>
-    <td align="center"><a href="https://github.com/WynieCronje"><img src="https://avatars.githubusercontent.com/u/4537265?v=4?s=100" width="100px;" alt=""/><br /><sub><b>WynieCronje</b></sub></a><br /><a href="https://github.com/hirezio/given/commits?author=WynieCronje" title="Code">💻</a> <a href="https://github.com/hirezio/given/commits?author=WynieCronje" title="Tests">⚠️</a> <a href="#maintenance-WynieCronje" title="Maintenance">🚧</a></td>
-    <td align="center"><a href="https://github.com/Yianen"><img src="https://avatars.githubusercontent.com/u/29684111?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yianen</b></sub></a><br /><a href="https://github.com/hirezio/given/commits?author=Yianen" title="Code">💻</a> <a href="https://github.com/hirezio/given/commits?author=Yianen" title="Tests">⚠️</a> <a href="#maintenance-Yianen" title="Maintenance">🚧</a></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.hirez.io/?utm_medium=Open_Source&utm_source=Github&utm_campaign=Lead_Generation&utm_content=given--all-contributors-profile-link"><img src="https://avatars1.githubusercontent.com/u/1430726?v=4?s=100" width="100px;" alt="Shai Reznik"/><br /><sub><b>Shai Reznik</b></sub></a><br /><a href="https://github.com/hirezio/given/commits?author=shairez" title="Code">💻</a> <a href="https://github.com/hirezio/given/commits?author=shairez" title="Documentation">📖</a> <a href="#ideas-shairez" title="Ideas, Planning, & Feedback">🤔</a> <a href="#infra-shairez" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-shairez" title="Maintenance">🚧</a> <a href="#mentoring-shairez" title="Mentoring">🧑‍🏫</a> <a href="https://github.com/hirezio/given/pulls?q=is%3Apr+reviewed-by%3Ashairez" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/hirezio/given/commits?author=shairez" title="Tests">⚠️</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/WynieCronje"><img src="https://avatars.githubusercontent.com/u/4537265?v=4?s=100" width="100px;" alt="WynieCronje"/><br /><sub><b>WynieCronje</b></sub></a><br /><a href="https://github.com/hirezio/given/commits?author=WynieCronje" title="Code">💻</a> <a href="https://github.com/hirezio/given/commits?author=WynieCronje" title="Tests">⚠️</a> <a href="#maintenance-WynieCronje" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Yianen"><img src="https://avatars.githubusercontent.com/u/29684111?v=4?s=100" width="100px;" alt="Yianen"/><br /><sub><b>Yianen</b></sub></a><br /><a href="https://github.com/hirezio/given/commits?author=Yianen" title="Code">💻</a> <a href="https://github.com/hirezio/given/commits?author=Yianen" title="Tests">⚠️</a> <a href="#maintenance-Yianen" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/fouchekeagan"><img src="https://avatars.githubusercontent.com/u/72212540?v=4?s=100" width="100px;" alt="Keagan Fouché"/><br /><sub><b>Keagan Fouché</b></sub></a><br /><a href="https://github.com/hirezio/given/commits?author=fouchekeagan" title="Code">💻</a> <a href="#maintenance-fouchekeagan" title="Maintenance">🚧</a></td>
+    </tr>
+  </tbody>
 </table>
 
 <!-- markdownlint-restore -->
