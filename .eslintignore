@@ -2,3 +2,5 @@ node_modules
 dist
 coverage
 .eslintrc.*
+update-core-hash.js
+*.conf.js

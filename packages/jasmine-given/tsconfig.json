@@ -18,7 +18,8 @@
     "strict": true,
     "baseUrl": ".",
     "outDir": "dist",
-    "types": ["jasmine", "node"]
+    "types": ["jasmine", "node"],
+    "allowImportingTsExtensions": true
   },
   "include": ["spec"]
 }
