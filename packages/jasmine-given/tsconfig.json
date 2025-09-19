@@ -20,5 +20,6 @@
     "outDir": "dist",
     "types": ["jasmine", "node"]
   },
-  "include": ["spec"]
+  "include": ["spec"],
+  "files": ["../../shared/given-core/given-core.ts"]
 }
