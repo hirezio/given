@@ -58,7 +58,7 @@ So if you change anything you need to verify that there is a test in both of the
 
 ### ✅ 4. Make sure you add / modify tests
 
-Run `yarn test:full` to make sure there aren't any errors
+Run `pnpm test:full` to make sure there aren't any errors
 
 .
 
@@ -67,7 +67,7 @@ Run `yarn test:full` to make sure there aren't any errors
 Instead of `git commit` use the following command:
 
 ```shell
-yarn commit
+pnpm commit
 ```
 
 It will then ask you a bunch of questions.
@@ -107,7 +107,7 @@ If you need to update your PR for some reason -
 
 - Make the required updates.
 
-- Re-run the tests to ensure tests are still passing `yarn test:full`
+- Re-run the tests to ensure tests are still passing `pnpm test:full`
 
 - Rebase your branch and force push to your GitHub repository (this will update your Pull Request):
 

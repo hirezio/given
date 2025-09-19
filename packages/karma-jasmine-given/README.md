@@ -24,7 +24,7 @@ A karma plugin for loading [@hirez_io/jasmine-given](https://github.com/hirezio/
 ## Installation
 
 ```
-yarn add -D @hirez_io/karma-jasmine-given
+pnpm add -D @hirez_io/karma-jasmine-given
 ```
 
 or

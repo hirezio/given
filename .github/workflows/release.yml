@@ -7,11 +7,9 @@ on:
   pull_request:
 jobs:
   build:
-    name: Build and test on node ${{ matrix.node }}
+    name: Build and test on node 22
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: ['20', '22']
+
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -19,37 +17,25 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
         with:
-          fetch-depth: '0'
+          version: 9.15.0
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 22.x
           registry-url: 'https://registry.npmjs.org'
-      - name: Get yarn cache dir
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - name: Cache Dependencies
-        uses: actions/cache@v4
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-        with:
-          path: |
-            ${{ steps.yarn-cache-dir-path.outputs.dir }}
-            node_modules
-            */*/node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: yarn build
+        run: pnpm build
 
       - name: Run Lint and Tests
-        run: yarn test:full
+        run: pnpm test:full
   release:
     name: Release
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
@@ -71,30 +57,19 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           scope: '@hirez_io'
 
-      - name: Get yarn cache dir
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - name: Cache Dependencies
-        uses: actions/cache@v4
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
         with:
-          path: |
-            ${{ steps.yarn-cache-dir-path.outputs.dir }}
-            node_modules
-            */*/node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          version: 9.15.0
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: yarn build
+        run: pnpm build
 
       - name: Run Lint and Tests
-        run: yarn test:full
+        run: pnpm test:full
 
       - name: Upload coverage reports
         uses: codecov/codecov-action@v1
@@ -108,7 +83,7 @@ jobs:
 
       - name: Update Version
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-        run: yarn lerna:version:ci
+        run: pnpm lerna:version:ci
 
       - name: Check Authentication with Registry
         env:
@@ -119,4 +94,4 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: yarn lerna:publish
+        run: pnpm lerna:publish
