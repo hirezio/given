@@ -14,13 +14,15 @@
     "lint": "eslint . --ext .js,.ts",
     "release": "changeset publish",
     "release.pkg-pr-new": "pnpm dlx pkg-pr-new publish --pnpm --compact './packages/*'",
-    "test": "run-s test:jasmine:coverage test:jest",
+    "test": "run-s test:jasmine:coverage test:jest test:vitest",
     "test:full": "run-s lint test",
     "test:jasmine": "ts-node --project packages/jasmine-given/tsconfig.json -r tsconfig-paths/register node_modules/jasmine/bin/jasmine.js JASMINE_CONFIG_PATH=packages/jasmine-given/jasmine.json",
     "test:jasmine:coverage": "nyc -r lcov --r text-summary  -e .ts -x \"**/*.spec.ts\" pnpm test:jasmine",
     "test:jasmine:watch": "nodemon --ext ts --watch \"shared/given-core/**/*.ts\" --watch \"packages/jasmine-given/**/*.ts\" --exec \"pnpm test:jasmine:coverage\"",
     "test:jest": "jest -c packages/jest-given/jest.config.js",
     "test:jest:watch": "jest -c packages/jest-given/jest.config.js --watchAll",
+    "test:vitest": "vitest -c packages/vitest-given/vitest.config.ts",
+    "test:vitest:watch": "vitest -c packages/vitest-given/vitest.config.ts --watch",
     "update-core-hash": "node update-core-hash"
   },
   "workspaces": {
@@ -74,6 +76,7 @@
     "ts-jest": "29.4.2",
     "ts-node": "10.9.2",
     "tsconfig-paths": "4.2.0",
-    "typescript": "5.9.2"
+    "typescript": "5.9.2",
+    "vitest": "4.0.18"
   }
 }

@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./temp-src",
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["temp-src"],
+  "exclude": ["**/*.spec.ts"]
+}
