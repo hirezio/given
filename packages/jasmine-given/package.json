@@ -10,7 +10,6 @@
     "company": "HiRez.io"
   },
   "description": "A jasmine addon that helps you clean up your microtests by breaking them into a Given / When / Then structure.",
-  "type": "module",
   "keywords": [
     "jasmine",
     "jasmine-given",
