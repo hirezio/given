@@ -1,0 +1,48 @@
+name: 'Setup and Test'
+description: 'Common setup and test steps for CI'
+
+inputs:
+  registry-url:
+    description: 'Registry URL for npm publishing'
+    required: false
+    default: ''
+  github-token:
+    description: 'GitHub token for pkg-pr-new'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup pnpm
+      uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4
+      with:
+        version: 9.15.0
+
+    - name: Use Node
+      uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+      with:
+        node-version: 24.x
+        registry-url: ${{ inputs.registry-url || '' }}
+        cache: 'pnpm'
+
+    - name: Install dependencies
+      shell: bash
+      run: pnpm install --frozen-lockfile
+
+    - name: Lint
+      shell: bash
+      run: pnpm lint
+
+    - name: Test
+      shell: bash
+      run: pnpm test
+
+    - name: Build
+      shell: bash
+      run: pnpm build
+
+    - name: Publish any commit / build for testing
+      shell: bash
+      run: pnpm release.pkg-pr-new
+      env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}

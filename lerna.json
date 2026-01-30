@@ -1,6 +1,6 @@
 {
   "packages": ["packages/*"],
-  "npmClient": "yarn",
+  "npmClient": "pnpm",
   "version": "independent",
   "command": {
     "publish": {

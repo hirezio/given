@@ -8,6 +8,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "change": "changeset",
     "commit": "git-cz",
     "build": "lerna run build",
     "format:fix": "pretty-quick --staged",
@@ -15,12 +16,11 @@
     "lerna:version": "lerna version",
     "lerna:version:ci": "lerna version --yes",
     "lint": "eslint . --ext .js,.ts",
-    "lint:commitmsg": "commitlint -E HUSKY_GIT_PARAMS",
     "test": "run-s test:jasmine:coverage test:jest",
     "test:full": "run-s lint test",
     "test:jasmine": "ts-node --project packages/jasmine-given/tsconfig.json -r tsconfig-paths/register node_modules/jasmine/bin/jasmine.js JASMINE_CONFIG_PATH=packages/jasmine-given/jasmine.json",
-    "test:jasmine:coverage": "nyc -r lcov --r text-summary  -e .ts -x \"**/*.spec.ts\" yarn test:jasmine",
-    "test:jasmine:watch": "nodemon --ext ts --watch \"shared/given-core/**/*.ts\" --watch \"packages/jasmine-given/**/*.ts\" --exec \"yarn test:jasmine:coverage\"",
+    "test:jasmine:coverage": "nyc -r lcov --r text-summary  -e .ts -x \"**/*.spec.ts\" pnpm test:jasmine",
+    "test:jasmine:watch": "nodemon --ext ts --watch \"shared/given-core/**/*.ts\" --watch \"packages/jasmine-given/**/*.ts\" --exec \"pnpm test:jasmine:coverage\"",
     "test:jest": "jest -c packages/jest-given/jest.config.js",
     "test:jest:watch": "jest -c packages/jest-given/jest.config.js --watchAll",
     "update-core-hash": "node update-core-hash"
@@ -30,16 +30,10 @@
       "packages/*"
     ]
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn format:fix",
-      "commit-msg": "yarn lint:commitmsg",
-      "post-commit": "yarn update-core-hash"
+      "pre-commit": "pnpm format:fix",
+      "post-commit": "pnpm update-core-hash"
     }
   },
   "commitlint": {
@@ -48,13 +42,15 @@
     ]
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.6",
+    "@changesets/get-github-info": "^0.6.0",
+    "@changesets/types": "^6.1.0",
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.1",
     "@types/node": "24.5.1",
     "@typescript-eslint/eslint-plugin": "8.44.0",
     "@typescript-eslint/parser": "8.44.0",
-    "commitizen": "4.3.1",
-    "cz-conventional-changelog": "3.3.0",
+    "dotenv": "^17.2.3",
     "eslint": "8.56.0",
     "eslint-config-prettier": "10.1.8",
     "execa": "9.6.0",
