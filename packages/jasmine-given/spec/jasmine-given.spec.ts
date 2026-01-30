@@ -2,7 +2,7 @@ import {
   NO_SPEC_FUNCTION_ERROR,
   NO_STACK_ERROR,
   CONTEXT_FOR_GWT_ERROR,
-} from '../../../shared/given-core/given-core';
+} from '../../../shared/given-core/given-core.ts';
 
 const root = (0, eval)('this');
 

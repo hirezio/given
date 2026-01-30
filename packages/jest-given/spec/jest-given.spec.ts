@@ -187,7 +187,7 @@ describe('Jest Given', () => {
       function errorThrowingCall() {
         (Then as any)('FAKE MESSAGE');
       }
-      expect(errorThrowingCall).toThrowError(NO_SPEC_FUNCTION_ERROR);
+      expect(errorThrowingCall).toThrow(NO_SPEC_FUNCTION_ERROR);
     });
   });
 

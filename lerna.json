@@ -1,7 +1,6 @@
 {
   "packages": ["packages/*"],
   "npmClient": "yarn",
-  "useWorkspaces": true,
   "version": "independent",
   "command": {
     "publish": {
@@ -16,5 +15,6 @@
       "message": "chore(release): publish new version"
     }
   },
-  "ignoreChanges": ["**/*.md", "**/*.spec.ts", "**/*.spec.js", "**/.all-contributorsrc"]
+  "ignoreChanges": ["**/*.md", "**/*.spec.ts", "**/*.spec.js", "**/.all-contributorsrc"],
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json"
 }
