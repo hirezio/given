@@ -10,3 +10,4 @@ src/**/*.js*
 TODO
 yarn-error.log
 lerna-debug.log
+.yarn
