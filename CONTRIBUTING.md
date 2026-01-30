@@ -58,34 +58,57 @@ So if you change anything you need to verify that there is a test in both of the
 
 ### ✅ 4. Make sure you add / modify tests
 
-Run `pnpm test:full` to make sure there aren't any errors
+- From the root of the project run `pnpm install`.
+
+- Then run `pnpm build`.
+
+- Run `pnpm lint` to lint the code.
+
+- Run `pnpm test:full` to make sure there aren't any errors
 
 .
 
-### ✅ 5. Commit your changes using commitizen:
+### ✅ 5. Add a "changeset"
 
-Instead of `git commit` use the following command:
+For your convenience, I've added a video tutorial I prepared for Qwik that covers the process of adding a changeset:
+
+[📽 TUTORIAL: Adding a changeset](https://go.screenpal.com/watch/cZivIcVPJQV)
+
+**5.1.** Run the following command to create a changeset:
 
 ```shell
-pnpm commit
+pnpm change
 ```
 
-It will then ask you a bunch of questions.
+**5.2.** Choose the packages that should be included in the changeset
 
-**For "scope" please choose from the following options:**
+**5.3** Choose the specific type of change
 
-| Scope name          | Description                                         |
-| ------------------- | --------------------------------------------------- |
-| core                | a change related to the file `given-core.ts`        |
-| jest-given          | a change related to `@hirez_io/jest-given`          |
-| jasmine-given       | a change related to `@hirez_io/jasmine-given`       |
-| karma-jasmine-given | a change related to `@hirez_io/karma-jasmine-given` |
-| global              | any change that doesn't fall under the above scopes |
+(hit `Enter` if you need to skip to the next option)
 
-This will create a descriptive commit message that follows the
-[Angular commit message convention](#commit-message-format).
+- `major` for breaking changes
+- `minor` for new features
+- `patch` for bug fixes
 
-This is necessary to generate meaningful release notes / CHANGELOG automatically.
+**5.4.** Prefix your change title with one of these:
+
+- `FEAT:` or `feat:` for features
+- `FIX:` or `fix:` for bug fixes
+- `DOCS` or `docs:` for documentation
+- `CHORE:` or `chore:` for chores
+- `INFRA:` or `infra:` for infrastructure changes
+
+**5.5.** Modify the created MD file
+
+After the `change` command runs, a new MD file will be created under the `.changeset` folder.
+
+Please modify this file to include a descriptive message of the changes you made.
+
+You can even add code examples if you need do, to describe a new feature for example. (pun intended 😉)
+
+The prefix and this elaborated description will be used to create the changelog files and release notes, so please give them love. 💗😊
+
+---
 
 .
 
@@ -149,5 +172,3 @@ After your pull request is merged, you can safely delete your branch and pull th
 .
 
 ### ✅ 9. That's it! Thank you for your contribution! 🙏💓
-
-[commit-message-format]: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#
