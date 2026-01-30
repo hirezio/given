@@ -7,7 +7,6 @@
   },
   "license": "MIT",
   "private": true,
-  "type": "module",
   "scripts": {
     "commit": "git-cz",
     "build": "lerna run build",
