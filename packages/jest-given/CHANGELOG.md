@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.2.0
+
+### Minor Changes
+
+- ✨ Upgraded Jest version to 30. (by [@shairez](https://github.com/shairez) in [`3564c8a`](https://github.com/hirezio/given/commit/3564c8a1523df5cfec68c3bd1ab79857c4773dff))
+
+  Contributed by [@Yianens](https://github.com/Yianens) in [#23](https://github.com/hirezio/given/pull/23)
+
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
@@ -7,77 +15,41 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @hirez_io/jest-given
 
-
-
-
-
 ## [1.1.3](https://github.com/hirezio/given/compare/@hirez_io/jest-given@1.1.1...@hirez_io/jest-given@1.1.3) (2023-06-03)
-
 
 ### Bug Fixes
 
-* **jest-given:** upgrade jest version to 29 ([d3d02b8](https://github.com/hirezio/given/commit/d3d02b8fbdd522bce2e41490dccfd27ebabe21df))
-
-
-
-
+- **jest-given:** upgrade jest version to 29 ([d3d02b8](https://github.com/hirezio/given/commit/d3d02b8fbdd522bce2e41490dccfd27ebabe21df))
 
 ## [1.1.1](https://github.com/hirezio/given/compare/@hirez_io/jest-given@1.1.0...@hirez_io/jest-given@1.1.1) (2022-07-25)
 
-
 ### Bug Fixes
 
-* **global:** upgrade jest version to 28 ([05b447f](https://github.com/hirezio/given/commit/05b447fcaf3cddfc346253f31e2630100488095c)), closes [#14](https://github.com/hirezio/given/issues/14)
-
-
-
-
+- **global:** upgrade jest version to 28 ([05b447f](https://github.com/hirezio/given/commit/05b447fcaf3cddfc346253f31e2630100488095c)), closes [#14](https://github.com/hirezio/given/issues/14)
 
 # [1.1.0](https://github.com/hirezio/given/compare/@hirez_io/jest-given@1.0.4...@hirez_io/jest-given@1.1.0) (2022-03-25)
 
-
 ### Features
 
-* **given-core:** show original error details in new context error ([bb92e36](https://github.com/hirezio/given/commit/bb92e365027f4f6f70583abc3b598795d6e491ba)), closes [#6](https://github.com/hirezio/given/issues/6)
-
-
-
-
+- **given-core:** show original error details in new context error ([bb92e36](https://github.com/hirezio/given/commit/bb92e365027f4f6f70583abc3b598795d6e491ba)), closes [#6](https://github.com/hirezio/given/issues/6)
 
 ## [1.0.4](https://github.com/hirezio/given/compare/@hirez_io/jest-given@1.0.3...@hirez_io/jest-given@1.0.4) (2022-03-13)
 
 **Note:** Version bump only for package @hirez_io/jest-given
 
-
-
-
-
 ## [1.0.3](https://github.com/hirezio/given/compare/@hirez_io/jest-given@1.0.2...@hirez_io/jest-given@1.0.3) (2020-08-25)
 
 **Note:** Version bump only for package @hirez_io/jest-given
 
-
-
-
-
 ## [1.0.2](https://github.com/hirezio/given/compare/@hirez_io/jest-given@1.0.1...@hirez_io/jest-given@1.0.2) (2020-08-25)
-
 
 ### Bug Fixes
 
-* **global:** fix npmignore files and tsconfig.json ([b29a1ee](https://github.com/hirezio/given/commit/b29a1eeaa5739f93f4d5120477f7bcd23a60a121))
-
-
-
-
+- **global:** fix npmignore files and tsconfig.json ([b29a1ee](https://github.com/hirezio/given/commit/b29a1eeaa5739f93f4d5120477f7bcd23a60a121))
 
 ## [1.0.1](https://github.com/hirezio/given/compare/@hirez_io/jest-given@1.0.0...@hirez_io/jest-given@1.0.1) (2020-08-18)
 
 **Note:** Version bump only for package @hirez_io/jest-given
-
-
-
-
 
 # 1.0.0 (2020-08-18)
 
