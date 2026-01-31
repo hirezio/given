@@ -1,7 +1,7 @@
 import {
+  CONTEXT_FOR_GWT_ERROR,
   NO_SPEC_FUNCTION_ERROR,
   NO_STACK_ERROR,
-  CONTEXT_FOR_GWT_ERROR,
 } from '../../../shared/given-core/given-core.ts';
 
 const root = (0, eval)('this');
@@ -369,7 +369,7 @@ describe('Jasmine Given', () => {
       }
 
       const howManyTimesTheContextMessageAppears = actualError.message.match(
-        /An error was thrown in When\(\):/gm
+        /An error was thrown in When\(\):/gm,
       ).length;
 
       expect(howManyTimesTheContextMessageAppears).toBe(1);

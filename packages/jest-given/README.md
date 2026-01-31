@@ -16,7 +16,7 @@ A jest addon that helps you clean up your microtests by breaking them into a **"
 ## Installation
 
 ```
-yarn add -D @hirez_io/jest-given
+pnpm add -D @hirez_io/jest-given
 ```
 
 or

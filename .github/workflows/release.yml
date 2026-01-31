@@ -4,112 +4,58 @@ on:
     branches:
       - master
       - staging
+    paths-ignore:
+      - '*.md'
+      - '.gitignore'
+      - 'LICENSE'
   pull_request:
 
 permissions:
-  contents: read
   id-token: write
+  contents: write
+  pull-requests: write
+
 jobs:
-  build:
-    name: Build and test on node ${{ matrix.node }}
+  pull-request:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: ['20', '22']
-    env:
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    if: github.ref != 'refs/heads/main'
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
+      - name: Checkout all commits
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
         with:
-          fetch-depth: '0'
-      - name: Setup Node
-        uses: actions/setup-node@v5.0.0
+          fetch-depth: 0
+      - name: Setup and Test
+        uses: ./.github/setup-and-test
         with:
-          node-version: ${{ matrix.node }}
-          registry-url: 'https://registry.npmjs.org'
-      - name: Get yarn cache dir
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Cache Dependencies
-        uses: actions/cache@v3
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-        with:
-          path: |
-            ${{ steps.yarn-cache-dir-path.outputs.dir }}
-            node_modules
-            */*/node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Build
-        run: yarn build
-
-      - name: Run Lint and Tests
-        run: yarn test:full
   release:
     name: Release
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-    needs: build
+    if: github.ref == 'refs/heads/master'
+
     runs-on: ubuntu-latest
-    env:
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
         with:
           fetch-depth: '0'
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          registry-url: 'https://registry.npmjs.org'
-          scope: '@hirez_io'
-
-      - name: Get yarn cache dir
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - name: Cache Dependencies
-        uses: actions/cache@v3
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-        with:
-          path: |
-            ${{ steps.yarn-cache-dir-path.outputs.dir }}
-            node_modules
-            */*/node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Build
-        run: yarn build
-
-      - name: Run Lint and Tests
-        run: yarn test:full
+      - name: Setup git user
+        shell: bash
+        run: |
+          git config --global user.name '@hirezio'
+          git config --global user.email 'hirezio@users.noreply.github.com'
 
       - name: Upload coverage reports
         uses: codecov/codecov-action@v1
         with:
           files: ./packages/jasmine-given/coverage/lcov.info, ./packages/jest-given/coverage/lcov.info
 
-      - name: Configure CI Git User
-        run: |
-          git config --global user.name '@hirezio'
-          git config --global user.email 'hirezio@users.noreply.github.com'
-
-      - name: Update Version
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-        run: yarn lerna:version:ci
-      - name: Publish to npm
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-        run: yarn lerna:publish
+      - name: Create Release Pull Request or Publish
+        if: github.ref == 'refs/heads/main'
+        id: changesets
+        uses: changesets/action@e0145edc7d9d8679003495b11f87bd8ef63c0cba # v1.5.3
+        with:
+          publish: pnpm release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
