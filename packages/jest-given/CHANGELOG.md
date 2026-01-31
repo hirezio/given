@@ -4,9 +4,7 @@
 
 ### Minor Changes
 
-- ✨ Upgraded Jest version to 30. (by [@shairez](https://github.com/shairez) in [`3564c8a`](https://github.com/hirezio/given/commit/3564c8a1523df5cfec68c3bd1ab79857c4773dff))
-
-  Contributed by [@Yianens](https://github.com/Yianens) in [#23](https://github.com/hirezio/given/pull/23)
+- ✨ Upgraded Jest version to 30. (by [@Yianens](https://github.com/Yianens) in [#23](https://github.com/hirezio/given/pull/23))
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
