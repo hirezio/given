@@ -53,6 +53,16 @@
         "code",
         "maintenance"
       ]
+    },
+    {
+      "login": "jsaguet",
+      "name": "Julien Saguet",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49377434?v=4",
+      "profile": "https://github.com/jsaguet",
+      "contributions": [
+        "code",
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
