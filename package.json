@@ -13,7 +13,7 @@
     "format:fix": "pretty-quick --staged",
     "lint": "eslint . --ext .js,.ts",
     "release": "changeset publish",
-    "release.pkg-pr-new": "pnpm dlx pkg-pr-new publish --pnpm --compact './packages/*'",
+    "release.pkg-pr-new": "pnpm dlx pkg-pr-new publish --pnpm --compact './packages/jasmine-given' './packages/jest-given' './packages/karma-jasmine-given'",
     "test": "run-s test:jasmine:coverage test:jest test:vitest",
     "test:full": "run-s lint test",
     "test:jasmine": "ts-node --project packages/jasmine-given/tsconfig.json -r tsconfig-paths/register node_modules/jasmine/bin/jasmine.js JASMINE_CONFIG_PATH=packages/jasmine-given/jasmine.json",
