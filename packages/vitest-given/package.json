@@ -2,8 +2,7 @@
   "name": "@hirez_io/vitest-given",
   "version": "1.1.0",
   "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.com"
+    "access": "public"
   },
   "author": {
     "name": "Shai Reznik",
