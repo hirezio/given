@@ -16,7 +16,7 @@ A vitest addon that helps you clean up your microtests by breaking them into a *
 ## Installation
 
 ```
-yarn add -D @hirez_io/vitest-given
+pnpm add -D @hirez_io/vitest-given
 ```
 
 or

@@ -41,9 +41,5 @@
   },
   "peerDependencies": {
     "vitest": "^4.0.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.2",
-    "vitest": "4.0.18"
   }
 }
