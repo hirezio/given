@@ -1,7 +1,9 @@
-# (jasmine | jest)-given Monorepo
+# (jasmine | jest | vitest)-given Monorepo
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Packages
@@ -12,13 +14,17 @@ This repository contains the HiRez.io's versions of:
 | ------------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------------- |
 | [@hirez_io/jest-given]          | [![@hirez_io/jest-given-status]][@hirez_io/jest-given-package]                   | Jest addon that adds the "Given When Then" syntax    |
 | [@hirez_io/jasmine-given]       | [![@hirez_io/jasmine-given-status]][@hirez_io/jasmine-given-package]             | Jasmine addon that adds the "Given When Then" syntax |
+| [@hirez_io/vitest-given]        | [![@hirez_io/vitest-given-status]][@hirez_io/vitest-given-package]               | Vitest addon that adds the "Given When Then" syntax  |
 | [@hirez_io/karma-jasmine-given] | [![@hirez_io/karma-jasmine-given-status]][@hirez_io/karma-jasmine-given-package] | Karma plugin for `@hirez_io/jasmine-given`           |
 
 [@hirez_io/jest-given]: https://github.com/hirezio/given/tree/master/packages/jest-given
+[@hirez_io/vitest-given]: https://github.com/hirezio/given/tree/master/packages/vitest-given
 [@hirez_io/jasmine-given]: https://github.com/hirezio/given/tree/master/packages/jasmine-given
 [@hirez_io/karma-jasmine-given]: https://github.com/hirezio/given/tree/master/packages/karma-jasmine-given
 [@hirez_io/jest-given-status]: https://img.shields.io/npm/v/@hirez_io/jest-given.svg
 [@hirez_io/jest-given-package]: https://npmjs.com/package/@hirez_io/jest-given
+[@hirez_io/vitest-given-status]: https://img.shields.io/npm/v/@hirez_io/vitest-given.svg
+[@hirez_io/vitest-given-package]: https://npmjs.com/package/@hirez_io/vitest-given
 [@hirez_io/jasmine-given-status]: https://img.shields.io/npm/v/@hirez_io/jasmine-given.svg
 [@hirez_io/jasmine-given-package]: https://npmjs.com/package/@hirez_io/jasmine-given
 [@hirez_io/karma-jasmine-given-status]: https://img.shields.io/npm/v/@hirez_io/karma-jasmine-given.svg
